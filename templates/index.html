@@ -1,0 +1,144 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Quote Generator | Inspire Your Day</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <div class="background-shape shape-one"></div>
+    <div class="background-shape shape-two"></div>
+    <div class="background-shape shape-three"></div>
+
+    <main class="container">
+
+        <header class="header">
+            <div class="brand">
+                <div class="brand-icon">✦</div>
+                <span>Quote<span class="brand-highlight">Spark</span></span>
+            </div>
+
+            <div class="header-tag">
+                ✨ A little inspiration every day
+            </div>
+        </header>
+
+        <section class="hero">
+            <span class="eyebrow">YOUR DAILY DOSE OF INSPIRATION</span>
+
+            <h1>
+                Words that <span>inspire.</span><br>
+                Thoughts that transform.
+            </h1>
+
+            <p>
+                Discover meaningful words, save your favourites
+                and keep inspiration close wherever you go.
+            </p>
+        </section>
+
+        <section class="quote-card">
+
+            <div class="quote-top">
+                <span class="quote-label">✦ YOUR DAILY QUOTE</span>
+                <span class="sparkle">✧</span>
+            </div>
+
+            <div class="quote-symbol">“</div>
+
+            <p id="quote">
+                Click the button below to discover your first quote.
+            </p>
+
+            <h3 id="author">— Unknown</h3>
+
+            <button id="newQuote" class="generate-btn">
+                <span>✦</span> Generate New Quote
+            </button>
+
+            <div class="action-buttons">
+
+                <button id="copyQuote" class="action-btn">
+                    <span>📋</span> Copy Quote
+                </button>
+
+                <button id="downloadQuote" class="action-btn">
+                    <span>⬇</span> Download Quote
+                </button>
+
+            </div>
+
+            <p id="message" role="status" aria-live="polite"></p>
+
+            <div class="card-decoration decoration-one"></div>
+            <div class="card-decoration decoration-two"></div>
+
+        </section>
+
+        <section class="content-section">
+
+            <div class="section-heading">
+                <div>
+                    <span class="section-kicker">YOUR COLLECTION</span>
+                    <h2>📚 Quote History</h2>
+                    <p>All the inspiring quotes you've discovered.</p>
+                </div>
+                <div class="section-icon">◷</div>
+            </div>
+
+            <div class="search-wrapper">
+                <span>⌕</span>
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Search quotes or authors..."
+                    aria-label="Search quote history"
+                >
+            </div>
+
+            <div id="history">
+                Loading history...
+            </div>
+
+        </section>
+
+        <section class="content-section favorites-section">
+
+            <div class="section-heading">
+                <div>
+                    <span class="section-kicker">SAVED WITH LOVE</span>
+                    <h2>❤️ Favourite Quotes</h2>
+                    <p>Your personal collection of meaningful words.</p>
+                </div>
+                <div class="section-icon heart-icon">♥</div>
+            </div>
+
+            <div id="favorites">
+                Loading favourites...
+            </div>
+
+        </section>
+
+        <footer>
+            <div class="footer-logo">✦ QuoteSpark</div>
+            <p>Find inspiration in every word.</p>
+            <span>Made with ❤️</span>
+        </footer>
+
+    </main>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
